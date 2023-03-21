@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  db:
+    container_name: db
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: northwind
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - ./postgresql_data:/var/lib/postgresql/data
+      - ./postgres_all.sql:/docker-entrypoint-initdb.d/create_table.sql
+    ports:
+      - 55432:5432
+
+  mssql:
+    user: root
+    build: .
+    ports:
+      - 11433:1433
+    volumes:
+      - ./data:/var/opt/mssql/data
+      - ./log:/var/opt/mssql/log
+      - ./secrets:/var/opt/mssql/secrets
