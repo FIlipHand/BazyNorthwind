@@ -32,3 +32,6 @@ Jeśli `up` zostało uruchomione bez flagi `-d` należy wykonać komendę z inne
   - w moim przypadku (używając DataGrip) po dodaniu bazy, muszę kliknąć PPM w połączenie -> Properties i ponownie ustalić ścieżkę, aby baza działała poprawnie. Nie wiem dlaczego tak się dzieję, jak ktoś wie niech da znać i poprawimy tootorial
 
 Po uruchomieniu w folderze pojawią się nowe foldery. **Nie usuwamy ich!!**. Sprawiają one że po wyłączeniu kontenerów, zmiany w bazach zostają zapisane. 
+
+## Przebudowa
+Na windowsie śmiga wszystko git, jednak Linux respektuje permisje plików, więc uruchomienie z flagą `--build` wymaga użycie `sudo`. Nie jest to idealne, jednak sprawia, że po prostu to działa
